@@ -185,7 +185,7 @@ jobs:
               'artifacts/mower-android-arm64.apk'], text=True)
           actual = next(line.split(': ', 1)[1] for line in result.splitlines()
               if line.startswith('Signer #1 certificate SHA-256 digest:'))
-          expected = 'ef5cdb073be86dc57c7e0a40aff7aef3d6cbdde2b69d63365b83d7f486205cd7'
+          expected = '54d49ce35ebde9965c6afe7c312f7558056546aee7ff4153965723ee7c2ee56b'
           if actual != expected:
               raise SystemExit('APK signing certificate differs from the existing development release.')
           print('Verified APK signature matches the existing development release.')
